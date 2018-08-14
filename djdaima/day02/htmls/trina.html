@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>haoduohuoche</h1>
+    <ul>
+        {% for foo in  carts%}
+            <li>{{ foo.name }}de shi su shi{{ foo.speed }}</li>
+        {% endfor %}
+        
+    </ul>
+</body>
+</html>

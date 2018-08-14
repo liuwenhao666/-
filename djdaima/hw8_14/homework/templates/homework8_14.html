@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业8月14号</title>
+</head>
+<body>
+<h1>批量显示</h1>
+<ul>
+    {% for foo in key %}
+      <li>枪名为：{{ foo.name }} 弹夹容量为{{ foo.capacity }} 生产日期为{{ foo.date }}</li>
+    {% endfor %}
+    
+</ul>
+<h1>显示名字包含m的</h1>
+<ul>
+    {% for foo in key1 %}
+      <li>枪名为：{{ foo.name }} 弹夹容量为{{ foo.capacity }} 生产日期为{{ foo.date }}</li>
+    {% endfor %}
+
+</ul>
+<h1>显示弹夹容量为35,30,15的</h1>
+<ul>
+    {% for foo in key2 %}
+      <li>枪名为：{{ foo.name }} 弹夹容量为{{ foo.capacity }} 生产日期为{{ foo.date }}</li>
+    {% endfor %}
+
+</ul>
+<h1>显示弹夹容量大于30的</h1>
+<ul>
+    {% for foo in key3 %}
+      <li>枪名为：{{ foo.name }} 弹夹容量为{{ foo.capacity }} 生产日期为{{ foo.date }}</li>
+    {% endfor %}
+
+</ul>
+<h1>显示生产日期为2018年的</h1>
+<ul>
+    {% for foo in key4 %}
+      <li>枪名为：{{ foo.name }} 弹夹容量为{{ foo.capacity }} 生产日期为{{ foo.date }}</li>
+    {% endfor %}
+
+</ul>
+<h1>通过不同value拿不同的字段</h1>
+<h3>拿name（在所有数据中，没有经过筛选，如需经过筛选，可以先筛选出来在去值）</h3>
+<ul>
+    {% for foo in key %}
+      <li>枪名为：{{ foo.name }}</li>
+    {% endfor %}
+</ul>
+<h3>拿弹夹容量</h3>
+<ul>
+    {% for foo in key %}
+      <li>弹夹容量为：{{ foo.capacity }}</li>
+    {% endfor %}
+</ul>
+<h3>拿生产日期</h3>
+<ul>
+    {% for foo in key %}
+      <li>生产日期为：{{ foo.date }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
